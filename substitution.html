@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="substitution.js"></script>
+		<title>Ciphers Webpage</title>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="caesar.html">Caesar Cipher</a></li>
+			<li><a href="atbash.html">Atbash Cipher</a></li>
+			<li><a class="active" href="substitution.html">Substitution Cipher</a></li>
+			<li><a href="design.html">Website Design</a></li>
+		</ul>
+
+		<div class="cipherDesc">
+			<span id="descId">The Substitution Cipher</span>
+			<span id="descBody">These kinds of ciphers are dedicated to replacing letters of the alphabet with other chosen letters or elements. The one we decided to use for this site was an Alphabetical cipher which is used to replace every letter in a message with the order of the alphabet you choose. This was created to give you the flexibility to create your own substitution cipher to be able to experiment with how substitution ciphers operate. Type in your own alphabetical substitutes below and try encrypting a message with it!</span>
+		</div>
+
+		<div class="remainingClass"><span id="remainingLetters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span></div>
+		
+		<div class="newAlphabetClass" oninput="checkLetters(); displayRemaining();">
+			<textarea id="remainingAlphabet" placeholder="Enter your own alphabet..." maxlength="26" pattern="^[a-zA-Z]*$"></textarea>
+		</div>
+
+		<div class="translateContainer"><textarea id = "messageInput" placeholder="Type a new message here..."></textarea>
+
+			<button class="leftBtn" type = "button" onclick="encrypt()">Encrypt</button>
+			<div class="v1"></div>
+			<button class="rightBtn" type = "button" onclick="decrypt()">Decrypt</button>
+
+		</div>
+
+		<div class="outputContainer"><textarea id = "messageOutput" readonly placeholder="Output: "></textarea></div>
+
+	</body>
+</html>

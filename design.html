@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="caesar.html">Caesar Cipher</a></li>
+			<li><a href="atbash.html">Atbash Cipher</a></li>
+			<li><a href="substitution.html">Substitution Cipher</a></li>
+			<li><a class="active" href="design.html">Website Design</a></li>
+		</ul>
+
+		<div class="cipherDesc">
+			<span id="descId">Header for all the pages</span>
+		</div>
+
+		<div class="designClass">
+			<span id="descBody">Descriptions for all the pages</span>
+		</div>
+
+		<div class="designClass">
+			<textarea id = "messageInput" placeholder="All text areas for the sites">Textareas for all the pages</textarea>
+		</div>
+
+		<div class="designClass">			
+			<input id="offset" type = number placeholder="##" min=0
+				   onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+			<span id="descBody">Number input for the Caesar Cipher</span>
+		</div>
+		
+		<div class="designClass">
+			<button type = "button">Button</button>
+			<span id="descBody">Buttons for all the pages</span>
+		</div>
+		
+		<div class="designClass">
+			<textarea id = "messageOutput" readonly placeholder="Output: ">Output box for all the pages</textarea>
+		</div>
+		
+		<div class="designClass">
+			<div class="v1"></div>
+			<span id="descBody">Vertical line in between all buttons</span>
+		</div>
+		
+		<div class="designClass">
+			<span id="remainingLetters">How the remaining letters are in the Substitution Cipher</span>
+		</div>
+
+	</body>
+</html>

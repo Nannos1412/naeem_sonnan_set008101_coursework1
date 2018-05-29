@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="atbash.js"></script>
+		<title>Ciphers Webpage</title>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="caesar.html">Caesar Cipher</a></li>
+			<li><a class="active" href="atbash.html">Atbash Cipher</a></li>
+			<li><a href="substitution.html">Substitution Cipher</a></li>
+			<li><a href="design.html">Website Design</a></li>
+		</ul>
+
+		<div class="cipherDesc">
+			<span id="descId">The Atbash Cipher</span>
+			<span id="descBody"> The Atbash Cipher was originally used to encrypt the Hebrew alphabet. In recent times, its use has been adapted in order to work with the English alphabet. It practically takes the map of the original alphabet and reverses it causing letters such as "A" to be interchanged with "Z". The encryption method is just about the exact same as the decryption method. Try out and see how the two work and if you can understand why there isn't a difference in their methods.</span>
+		</div>
+
+		<!--
+<div class="buttonGroup">
+<button type = "button" onclick="encrypt()">Encrypt</button>
+<button type = "button" onclick="encrypt()">Decrypt</button>
+</div>
+-->
+		<div class="translateContainer"><textarea id = "messageInput" placeholder="Type a new message here..."></textarea>
+
+			<button class="leftBtn" type = "button" onclick="encrypt()">Encrypt</button>
+			<div class="v1"></div>
+			<button class="rightBtn" type = "button" onclick="encrypt()">Decrypt</button>
+
+		</div>
+
+		<div class="outputContainer"><textarea id = "messageOutput" readonly placeholder="Output: "></textarea></div>
+
+	</body>
+</html>

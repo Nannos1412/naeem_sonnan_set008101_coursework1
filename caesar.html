@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="caesar.js"></script>
+		<title>Ciphers Webpage</title>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a class="active" href="caesar.html">Caesar Cipher</a></li>
+			<li><a href="atbash.html">Atbash Cipher</a></li>
+			<li><a href="substitution.html">Substitution Cipher</a></li>
+			<li><a href="design.html">Website Design</a></li>
+		</ul>
+		
+		<div class="cipherDesc">
+			<span id="descId">The Caesar Cipher</span>
+			<span id="descBody">This cipher is one of the oldest and most well-known forms of enciphering techniques because it is based on a monoalphabetic cipher. The Caesar Cipher is easy to decode as it is does not have a complex encryption scheme and is often incorporated into other more complex schemes. This cipher works by shifting the alphabet using an offset value. Go ahead and try it for yourself!</span>
+		</div>
+
+		<div class="translateContainer"><textarea id = "messageInput" placeholder="Type a new message here..."></textarea>
+			
+			<input id="offset" type = number placeholder="##" min=0
+				   onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+			
+			<button class="leftBtn" type = "button" onclick="encrypt()">Encrypt</button>
+			<div class="v1"></div>
+			<button class="rightBtn" type = "button" onclick="decrypt()">Decrypt</button>
+			
+		</div>
+		
+		<div class="outputContainer"><textarea id = "messageOutput" readonly placeholder="Output: "></textarea></div>
+		
+
+	</body>
+</html>
